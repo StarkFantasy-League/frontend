@@ -2,6 +2,19 @@
 
 This project is a frontend application built with [Next.js](https://nextjs.org/), following the principles of **Screaming Architecture** to maintain clean, modular, and scalable code. It can be run using either `pnpm` or `npm` and runs on port `3000` by default.
 
+## Colaborators! 
+The branch need to follows the next format: 
+(if a feature)
+feat/name-branch
+
+And commits need to have the next messages: 
+(If feature)
+feat: change-description
+(if update)
+update: change-description
+(if remove)
+remove: change-description
+
 ## 📌 Requirements
 
 - Node.js `>= 18.x`
