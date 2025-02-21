@@ -3,7 +3,7 @@ import React from "react";
 import MatchPanel from "./components/MatchPanel";
 import LeaguesPanel from "./components/LeaguesPanel";
 
-function Home() {
+function page() {
 	const handleViewDetails = () => {
 		console.log("View Details clicked");
 	};
@@ -21,4 +21,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default page;
