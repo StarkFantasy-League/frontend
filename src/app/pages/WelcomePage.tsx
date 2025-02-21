@@ -9,6 +9,7 @@ export default function WelcomePage() {
       {/* Hero Section */}
       <section className="relative w-full h-screen">
         <div className="absolute inset-0">
+          {/* Nav bar  */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
