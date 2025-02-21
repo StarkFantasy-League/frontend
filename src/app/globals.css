@@ -14,6 +14,17 @@
   }
 }
 
+@layer utilities {
+  .bg-custom-gradient-league {
+    background: linear-gradient(90deg, #020618 0%, #312C85 50.5%, #020618 100%);
+  }
+
+  .bg-card-league {
+    background: linear-gradient(180deg, #D1D5DC 90%, rgba(209, 213, 220, 0) 100%);
+
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

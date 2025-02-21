@@ -18,17 +18,17 @@ export const availableLeaugesData = [
         id: 88
     },
     {
-        name: "ARG Liga Profesional",
+        name: "Liga Profesional",
         img: arg_liga,
         id: 142
     },
     {
-        name: "BEL1 Pro League",
+        name: "Pro League",
         img: bel_pro,
         id: 144
     },
     {
-        name: "BRA1 Serie A",
+        name: "Serie A",
         img: bra_serie,
         id: 149
     },
