@@ -27,7 +27,7 @@ const LeaguesPanel = () => {
 	const handleTouchEnd = (e: React.TouchEvent | React.MouseEvent) => {
 		touchEndX.current = "changedTouches" in e ? e.changedTouches[0].clientX : e.clientX;
 		const swipeDistance = touchEndX.current - touchStartX.current;
-		const swipeThreshold = 100;
+		const swipeThreshold = 50; // Lower threshold for mobile
 
 		if (swipeDistance > swipeThreshold) {
 			handleSwipe("right");
@@ -45,18 +45,18 @@ const LeaguesPanel = () => {
 
 	const imageVariants = {
 		center: { x: "0%", scale: 1, zIndex: 5 },
-		left1: { x: "-93%", scale: 0.7, zIndex: 2 },
-		left: { x: "-160%", scale: 0.5, zIndex: 1 },
-		right: { x: "160%", scale: 0.5, zIndex: 1 },
-		right1: { x: "93%", scale: 0.7, zIndex: 2 },
+		left1: { x: "-100%", scale: 0.7, zIndex: 2 },
+		left: { x: "-180%", scale: 0.5, zIndex: 1 },
+		right: { x: "180%", scale: 0.5, zIndex: 1 },
+		right1: { x: "100%", scale: 0.7, zIndex: 2 },
 	};
 
 	return (
-		<div className="bg-custom-gradient-league w-full relative h-[400px] flex items-center justify-center overflow-hidden">
+		<div className="bg-custom-gradient-league w-full relative h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
 			{/* Left Arrow */}
 			<motion.button
 				whileTap={{ scale: 0.9 }}
-				className="absolute left-5 z-10 bg-gray-800/70 w-11 h-11 rounded-full cursor-pointer hover:bg-gray-700 transition"
+				className="absolute left-6 md:left-[15%] lg:left-[20%] z-10 bg-gray-800/60 font-extrabold w-9 h-9 md:w-11 md:h-11 rounded-full text-white cursor-pointer hover:bg-gray-700 transition"
 				onClick={() => handleSwipe("right")}
 			>
 				&lt;
@@ -80,22 +80,27 @@ const LeaguesPanel = () => {
 							exit="center"
 							variants={imageVariants}
 							transition={{ duration: 0.5, ease: "easeInOut" }}
-							className="flex flex-col items-center justify-center bg-indigo-800 rounded-[15px]"
-							style={{ position: "absolute", width: "240px", height: "280px" }}
+							className="flex flex-col items-center absolute w-[180px] h-[220px] md:w-[220px] md:h-[260px] lg:w-[240px] lg:h-[280px] justify-center bg-indigo-800 rounded-[10px] md:rounded-[15px]"
 						>
-							<div className="bg-card-league w-full h-[60%] flex items-center justify-center rounded-t-[15px]">
-								<Image src={img.image} alt={img.league} width={100} height={100} />
+							<div className="bg-card-league w-full h-[60%] flex items-center justify-center rounded-t-[10px] md:rounded-t-[15px]">
+								<Image
+									src={img.image}
+									alt={img.league}
+									className=" w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full"
+								/>
 							</div>
-							<div className="w-full h-[40%] flex items-center justify-center rounded-b-[15px]">
-								<p className="text-xl">{img.league}</p>
+							<div className="w-full h-[40%] flex items-center justify-center rounded-b-[10px] md:rounded-b-[15px]">
+								<p className="text-sm md:text-lg text-white">{img.league}</p>
 							</div>
 						</motion.div>
 					</AnimatePresence>
 				))}
 			</motion.div>
+
+			{/* Right Arrow */}
 			<motion.button
 				whileTap={{ scale: 0.9 }}
-				className="absolute right-5 z-10 bg-gray-800/70 w-11 h-11 rounded-full cursor-pointer hover:bg-gray-700 transition"
+				className="absolute right-6 md:right-[15%] lg:right-[20%] z-10 bg-gray-800/60 font-extrabold w-9 h-9 md:w-11 md:h-11 rounded-full text-white cursor-pointer hover:bg-gray-700 transition"
 				onClick={() => handleSwipe("left")}
 			>
 				&gt;
