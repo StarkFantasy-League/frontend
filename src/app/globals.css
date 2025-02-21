@@ -22,3 +22,8 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+.clip-path-polygon {
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
