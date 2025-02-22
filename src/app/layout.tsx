@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Open_Sans, Exo_2 } from "next/font/google";
+import { Geist, Geist_Mono, Exo_2, Kanit, Open_Sans } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,16 +13,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"], 
-});
-
 const exo2 = Exo_2({
   variable: "--font-exo-2",
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700"], 
+  weight: ["300", "400", "600", "700"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+});
+
+const kanit = Kanit({
+  variable: "--font-kanit",
+  subsets: ["latin"],
+  weight: ["800"],
 });
 
 export const metadata: Metadata = {
@@ -37,9 +44,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${exo2.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${exo2.variable} ${kanit.variable} flex flex-col h-screen antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
