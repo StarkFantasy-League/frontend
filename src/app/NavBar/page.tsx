@@ -1,4 +1,4 @@
-import NavBar from "../components/navBar";
+import NavBar from "../../components/navBar";
 
 export default function NavBarTest() {
   return (
