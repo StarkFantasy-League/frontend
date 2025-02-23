@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"; 
 import Image from "next/image";
-import Navbar from '../components/navBar'
+import Navbar from '../../components/navBar'
 
 export default function WelcomePage() {
   return (
