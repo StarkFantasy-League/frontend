@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import MatchPanel from './components/MatchPanel'
+import UserPanel from "./components/UserPanel";
 
 function page() {
     const handleViewDetails = () => {
@@ -15,6 +16,7 @@ function page() {
       time="20:00"
       onViewDetails={handleViewDetails}
     />
+       <UserPanel/>
     </>
   )
 }
