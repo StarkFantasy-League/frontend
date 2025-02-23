@@ -13,8 +13,11 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
+        geist: "var(--font-geist-sans)",
+        geistMono: "var(--font-geist-mono)",
         kanit: ["var(--font-kanit)", "sans-serif"],
         openSans: ["var(--font-openSans)", "sans-serif"],
+        exo2: "var(--font-exo-2)",
       },
     },
   },
