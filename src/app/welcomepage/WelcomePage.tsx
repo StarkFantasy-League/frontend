@@ -1,7 +1,8 @@
 'use client'
 
-import { motion } from "framer-motion"; // Import motion from Framer Motion
+import { motion } from "framer-motion"; 
 import Image from "next/image";
+import Navbar from '../components/navBar'
 
 export default function WelcomePage() {
   return (
@@ -9,7 +10,7 @@ export default function WelcomePage() {
       {/* Hero Section */}
       <section className="relative w-full h-screen">
         <div className="absolute inset-0">
-          {/* Nav bar  */}
+        <Navbar />
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -20,7 +21,7 @@ export default function WelcomePage() {
               src="/welcomepageImages/Background.png"
               alt="Background"
               fill
-              className="object-cover"
+              className="object-cover -z-10"
             />
           </motion.div>
         </div>
@@ -67,8 +68,8 @@ export default function WelcomePage() {
           >
             <Image src="/welcomepageImages/Icon.png" alt="Icon" width={700} height={100} className="w-full sm:w-auto" />
           </motion.div>
-          <div className="text-white text-center sm:text-right w-full sm:w-[380px]">
-            <h2 className="text-3xl tracking-wider mb-4">What is Stark Fantasy League?</h2>
+          <div className="text-white text-center sm:text-right w-full sm:w-[550px]">
+            <h2 className="text-3xl tracking-wider mb-4 font-bold">What is Stark Fantasy League?</h2>
             <p className="text-sm">
               An innovative Web3 <span className="text-orange-500">Fantasy Sports</span> game where players assemble virtual teams, compete in tournaments, and earn rewards.
             </p>
@@ -172,26 +173,40 @@ export default function WelcomePage() {
 
       {/* Call to Action Section */}
       <section className="bg-slate-950 text-white flex flex-col justify-center items-center py-16 px-4">
-        <h2 className="text-2xl sm:text-3xl mb-4 text-center">What are you waiting for?</h2>
+  <h2 className="text-2xl sm:text-3xl mb-6 text-center">What are you waiting for?</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-11 max-w-[80%] mx-auto text-center sm:text-left">
-          <div>
-            <p>Start now by registering on our platform and join the Ultimate Fantasy Sports Experience!</p>
-            <p className="mt-2">Build your dream team, compete with players worldwide, and earn real rewards—all powered by Starknet’s secure blockchain.</p>
-            <div className="flex justify-center sm:justify-start mt-6">
-              <button className="bg-orange-500 text-white px-4 py-2 rounded-lg">Register Now</button>
-            </div>
-          </div>
+  <div className="flex flex-col sm:flex-row gap-10 max-w-4xl mx-auto text-center sm:text-left">
+    {/* Left Section */}
+    <div className="flex-1">
+      <p>Start now by registering on our platform and join the Ultimate Fantasy Sports Experience!</p>
+      <p className="mt-2">
+        Build your dream team, compete with players worldwide, and earn real rewards—all powered by Starknet’s secure blockchain.
+        Sign up now and start playing! 🚀
+      </p>
+      <div className="mt-6 flex justify-center">
+        <button className="bg-orange-500 text-white px-5 py-2 rounded-lg shadow-md">
+          Register Now
+        </button>
+      </div>
+    </div>
 
-          <div>
-            <p>Want to learn more about us? All you need is right here! From the game rules to the complete working of the on-chain system.</p>
-            <div className="mt-4 flex flex-col items-center sm:items-start gap-2">
-              <button className="bg-indigo-900 text-white px-4 py-2 rounded-lg w-full sm:w-auto">About Us</button>
-              <button className="bg-indigo-900 text-white px-4 py-2 rounded-lg w-full sm:w-auto">View Our Rules</button>
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Right Section */}
+    <div className="flex-1">
+      <p>
+        Want to learn more about us? All you need is right here! From the game rules to the complete working of the on-chain system.
+      </p>
+      <div className="mt-4 flex justify-center flex-col items-center sm:items-start gap-3">
+        <button className="bg-indigo-900 text-white px-5 py-2 rounded-lg w-full sm:w-auto shadow-md">
+          About Us
+        </button>
+        <button className="bg-indigo-900 text-white px-5 py-2 rounded-lg w-full sm:w-auto shadow-md">
+          View Our Rules
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
