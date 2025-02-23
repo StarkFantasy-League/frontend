@@ -27,7 +27,7 @@ const LeaguesPanel = () => {
 	const handleTouchEnd = (e: React.TouchEvent | React.MouseEvent) => {
 		touchEndX.current = "changedTouches" in e ? e.changedTouches[0].clientX : e.clientX;
 		const swipeDistance = touchEndX.current - touchStartX.current;
-		const swipeThreshold = 50; // Lower threshold for mobile
+		const swipeThreshold = 50;
 
 		if (swipeDistance > swipeThreshold) {
 			handleSwipe("right");
@@ -53,7 +53,6 @@ const LeaguesPanel = () => {
 
 	return (
 		<div className="bg-custom-gradient-league w-full relative h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
-			{/* Left Arrow */}
 			<motion.button
 				whileTap={{ scale: 0.9 }}
 				className="absolute left-6 md:left-[15%] lg:left-[20%] z-10 bg-gray-800/60 font-extrabold w-9 h-9 md:w-11 md:h-11 rounded-full text-white cursor-pointer hover:bg-gray-700 transition"
@@ -62,7 +61,6 @@ const LeaguesPanel = () => {
 				&lt;
 			</motion.button>
 
-			{/* League Cards */}
 			<motion.div
 				className="relative w-full h-full flex items-center justify-center select-none cursor-grabbing"
 				onTouchStart={handleTouchStart}
