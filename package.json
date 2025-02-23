@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.4.7",
     "@starknet-react/chains": "^3.1.2",
     "@starknet-react/core": "^3.7.2",
     "autoprefixer": "^10.4.20",
