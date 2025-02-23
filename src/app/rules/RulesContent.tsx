@@ -33,20 +33,24 @@ export default function RulesContent() {
                       <RulesTableFootball />
                       <div id="3">
                         <h3 className="text-2xl text-left pb-2  lg:text-3xl">Card Punctuation Metrics</h3>
-                        <p className="text-left">
-                          Additionally the cards affect in a negative way the performance of your team. The yellow card has <br />
-                          the following rules
-                           <p className="ml-5">- For <span className="text-orange-600">players in the field</span> a yellow card penalize with <span className="text-orange-600">-2 points</span> for the player.</p>
-                           <p className="ml-6">- For <span className="text-orange-600">goalkeepers</span> a yellow card penalize with <span className="text-orange-600">-5 points</span> for the player.</p>
-                        </p>
+                        <div className="text-left">
+                            <p>
+                              Additionally the cards affect in a negative way the performance of your team. The yellow card has <br />
+                              the following rules:
+                            </p>
+                            <ul className="ml-5">
+                              <li>For <span className="text-orange-600">players in the field</span> a yellow card penalize with <span className="text-orange-600">-2 points</span> for the player.</li>
+                              <li>For <span className="text-orange-600">goalkeepers</span> a yellow card penalize with <span className="text-orange-600">-5 points</span> for the player.</li>
+                            </ul>
+                      </div>
                         <p className="text-left">In the case of <span className="text-orange-600">red card</span> it will set to 0 the point of the player in that match.</p>
                       </div>
                       <div id="4">
                          <h3 className="text-xl text-left pb-1 pt-3  lg:text-3xl">Additional Rules</h3>
-                         <p className="text-left">
-                           <p><span className="text-orange-600 font-semibold">Substitues</span>: Bench players <span className="text-orange-600">earn half the points</span>(e.g., a goal = +5 points instead of 10)</p>
-                           <p><span className="text-orange-600 font-semibold">Team Captain</span>: You can select a captain for your team, these player earns <span className="text-orange-600">double point</span>(e.g., a goal <br /> = +20 points instead of 10).</p>
-                         </p>
+                         <div className="text-left">
+                              <div><span className="text-orange-600 font-semibold">Substitues</span>: Bench players <span className="text-orange-600">earn half the points</span>(e.g., a goal = +5 points instead of 10)</div>
+                              <div><span className="text-orange-600 font-semibold">Team Captain</span>: You can select a captain for your team, these player earns <span className="text-orange-600">double point</span>(e.g., a goal <br /> = +20 points instead of 10).</div>
+                        </div>
                       </div>
                   </div>
               </section>
@@ -59,10 +63,10 @@ export default function RulesContent() {
                   <RulesTableBasketball />
                   <div>
                       <h3 className="text-xl text-left pb-1 pt-3  lg:text-2xl">Additional Rules</h3>
-                      <p className="text-left">
-                        <p><span className="text-orange-600 font-semibold">Substitues</span>: Bench players <span className="text-orange-600">earn half the points</span>(e.g., a player scored 20 points = +10 points instead of 20)</p>
-                        <p><span className="text-orange-600 font-semibold">Team Captain</span>: You can select a captain for your team, these player earns <span className="text-orange-600">double point</span>(e.g., a player <br /> scored 10 points = +20 points instead of 10).</p>
-                     </p>
+                      <div className="text-left">
+                        <div><span className="text-orange-600 font-semibold">Substitues</span>: Bench players <span className="text-orange-600">earn half the points</span>(e.g., a player scored 20 points = +10 points instead of 20)</div>
+                        <div><span className="text-orange-600 font-semibold">Team Captain</span>: You can select a captain for your team, these player earns <span className="text-orange-600">double point</span>(e.g., a player <br /> scored 10 points = +20 points instead of 10).</div>
+                      </div>
                   </div>
               </section>
               <section>
@@ -75,17 +79,17 @@ export default function RulesContent() {
                 </div>
                 <div id="7">
                   <h1 className="text-3xl font-semibold py-3 text-left lg:text-4xl">Rewards</h1>
-                  <p className="text-left">
-                    Each tournament offers different rewards based on the entry fee.
-                    <p className="flex ml-3 pb-2">
+                  <div className="text-left">
+                    <p>Each tournament offers different rewards based on the entry fee.</p>
+                    <div className="flex ml-3 pb-2">
                       <FaTrophy className="text-yellow-400 ml-3 mt-1" />
-                      <p className="ml-3">Top 3 Winnes - Earn a <span className="text-orange-600">STRK</span> prize.</p>
-                    </p>
-                    <p className="flex ml-5 lg:ml-9">
+                      <span className="ml-3">Top 3 Winnes - Earn a <span className="text-orange-600">STRK</span> prize.</span>
+                    </div>
+                    <div className="flex ml-5 lg:ml-9">
                       <FaMedal className="text-yellow-500 "/>
-                      <p className="ml-3"> 4th & 5th Place - Recive an <span className="text-orange-600">exclusive NFT</span></p>
-                    </p>
-                  </p>
+                      <span className="ml-3"> 4th & 5th Place - Recive an <span className="text-orange-600">exclusive NFT</span></span>
+                    </div>
+                  </div>
                   <div className="flex  rounded-md ml-1 bg-slate-900 mb-5 mt-2 lg:py-3">
                     <FaExclamationTriangle className="text-yellow-500 text-2xl ml-1 lg:text-lg" />
                     <p className="ml-1 "><span className="font-semi-bold">Note:</span> Private tournaments (<span className="text-orange-600">Friends League</span>) do not qualify for rewards. Play in <span>Official</span> competitions to win!</p>
