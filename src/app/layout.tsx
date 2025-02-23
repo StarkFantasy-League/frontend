@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Exo_2, Kanit, Open_Sans } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
+import StarknetProvider from "@/context/starknet-provider"; 
+import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,17 +16,16 @@ const geistMono = Geist_Mono({
 });
 
 const exo2 = Exo_2({
-  variable: '--font-exo-2',
-  subsets: ['latin'],
-})
+  variable: "--font-exo-2",
+  subsets: ["latin"],
+});
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
-})
+});
 
 const kanit = Kanit({ variable: "--font-kanit", weight: "800" });
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -39,9 +40,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${exo2.variable}  ${kanit.variable} flex flex-col h-screen antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${exo2.variable} ${kanit.variable} flex flex-col h-screen antialiased`}
       >
-        {children}
+        <StarknetProvider>
+          {children}
+          <Toaster />
+        </StarknetProvider>
         <Footer />
       </body>
     </html>
