@@ -13,7 +13,6 @@
     --foreground: #ededed;
   }
 } */
-
 @layer utilities {
   .bg-custom-gradient-league {
     background: linear-gradient(90deg, #020618 0%, #312C85 50.5%, #020618 100%);
