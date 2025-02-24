@@ -23,6 +23,7 @@ const PremierLeague = () => {
      
         {user.isConnected ? (
           <>
+<h1></h1>
             <h2 className="text-lg md:text-2xl tracking-[0.2em]  uppercase">Welcome to</h2>
             <h1 className="text-[40px] sm:text-[70px] md:text-[95px] lg:[120px] font-black mt-2">Premier League</h1>
             <h3 className="text-xl sm:text-2xl font-medium tracking-[1.2em] md:text-3xl md:tracking-[2.2em] lg:text-4xl lg:tracking-[1.9em] md:mt-5 sm:tracking-[2em] mt-2">
