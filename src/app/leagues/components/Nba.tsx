@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Serie() {
+export default function Nba() {
   const [user, setUser] = useState({
     isConnected: true,
     walletAddress: "0x1234abcd5678efgh",
