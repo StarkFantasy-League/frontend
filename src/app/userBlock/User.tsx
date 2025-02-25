@@ -24,9 +24,9 @@ const UserBlock: React.FC<UserBlockProps> = ({
     <div className="flex flex-col gap-10 justify-center items-center min-h-screen bg-gray-700">
       {/* Balance display container */}
     <div
-    className=" w-[250px] border p-2 justify-center flex gap-3 items-center  bg-black rounded-full hover:opacity-90 transition-opacity">
+    className="w-[280px] border p-2 justify-center flex gap-3 items-center  bg-black rounded-full hover:opacity-90 transition-opacity">
       {/* Balance amount display */}
-  <div className="text-white text-sm px-4 text-center min-w-[150px] py-2 border-[5px] border-blue-950 rounded-full bg-[#FF9500]">
+  <div className="text-white text-sm px-4 text-center min-w-[150px] py-2 border-[5px] border-blue-950 rounded-full bg-[#FF9500] ml-2">
 {balance}
   </div>
       {/* Profile image and connect button */}
@@ -36,25 +36,25 @@ const UserBlock: React.FC<UserBlockProps> = ({
     src={profile}
     alt="Profile Logo"
     width={100}
-    height={100}
+    height={60}
   />
   </button>
 </div>
     
     {/* Connect wallet container */}
 <div
-    className="w-[250px] border p-2 justify-center flex gap-3 items-center  bg-black rounded-full hover:opacity-90 transition-opacity">
-  <div className="text-white text-sm px-4 text-center min-w-[150px] py-2 border-[5px] border-blue-950 rounded-full bg-[#FF9500]">
+    className="w-[280px] border p-2 justify-center flex gap-3 items-center  bg-black rounded-full hover:opacity-90 transition-opacity">
+  <div className="text-white text-sm px-4 text-center min-w-[150px] py-2 border-[5px] border-blue-950 rounded-full bg-[#FF9500] ml-2">
 {connect}
   </div>
-  <button onClick={onConnect} className="w-fit rounded-full">
+  <button onClick={onConnect} className="w-fit rounded-full hover:cursor-pointer">
     {/* Profile image button for wallet connection */}
   <Image
     className="rounded-full"
     src={profile}
     alt="Profile Logo"
     width={100}
-    height={100}
+    height={60}
   />
   </button>
 
