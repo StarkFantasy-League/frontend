@@ -7,6 +7,7 @@ import LeagueCards from "./components/LeagueCards";
 import NavBar from "@/components/navBar";
 import Image from "next/image";
 import EmptyPanel from "./components/EmptyPanel";
+import LeaguePanelCard from "./components/LeaguePanelCard";
 
 function page() {
     const handleViewDetails = () => {
@@ -45,7 +46,7 @@ function page() {
             <div className="flex gap-8 w-[70%] mx-auto">
                 <div className="flex flex-col gap-y-2">
                     <UserPanel />
-                    <LeaguesPanel />
+                    <LeaguePanelCard />
                 </div>
                 <div className="flex flex-col gap-y-2 w-[80%]">
                     <MatchPanel
@@ -56,7 +57,7 @@ function page() {
                         onViewDetails={handleViewDetails}
                     />
 
-                    <LeagueCards />
+                    <LeaguesPanel />
                 </div>
                 <div>
                     <EmptyPanel />
