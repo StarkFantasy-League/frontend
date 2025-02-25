@@ -19,7 +19,7 @@ function MatchPanel({
 }: MatchPanelProps) {
     const { day, dayNumber, month, year } = formatDate(date);
     return (
-        <div className="w-[50rem] h-[22rem] rounded-2xl relative overflow-hidden ">
+        <div className="w-full h-[22rem] rounded-2xl relative overflow-hidden ">
             <Image
                 src="/assets/images/match-panel.jpg"
                 alt="match-panel"
